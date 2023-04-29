@@ -9,6 +9,7 @@ const saltRounds = 10;
 const app = express();
 app.use(cors());
 app.use(bodyParser.json());
+app.listen(3000);
 
 // Create Database named 'Bank'
 const db = new sqlite3.Database('Bank.db', (err) => {
