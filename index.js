@@ -103,7 +103,7 @@ app.get('/transactions', async (req, res) => {
       const userId = getUserIdFromToken(req.headers.authorization);
   
       // get the user's account
-      const account = await db.get('SELECT * FROM accounts WHERE user_id = ?', userId);
+      const account = await db.get('SELECT * FROM Accounts WHERE user_id = ?', userId);
   
       res.send(`
         <html>
